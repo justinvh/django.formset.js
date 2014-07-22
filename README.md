@@ -27,7 +27,7 @@ set a data-djang-form-priority tag to the form.priority element.
       <li data-django-form='form'>
         {{ form.priority|attr:"data-django-form-priority:0" }}
         Priority #<span data-django-form-order>{{ forloop.counter }}</span>
-        <button data-django-form-delete>Delete Form</button>
+        <button data-django-form-remove>Delete Form</button>
       </li>
       {% endfor %}
       <li>{{ formset.management_form }}</li>
@@ -35,7 +35,7 @@ set a data-djang-form-priority tag to the form.priority element.
 Finally we just need a way to specify how to add forms. Just add the
 appropritate data selector to the element that will handle the click event.
 
-      <li><button data-yl-formset-add>Add Form</button></li>
+      <li><button data-django-formset-add>Add Form</button></li>
     </ul>
 
 That's it for your DOM changes. Now you just need to make a small JavaScript
